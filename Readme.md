@@ -1,5 +1,7 @@
 This example demonstrates how powerful SpEL (Spring Expression Language) is.
 
+More info on SpEL can find on the website of [baeldung](http://www.baeldung.com/spring-expression-language).
+
 It is a standard feature of spring. 
 
 ## Before use
