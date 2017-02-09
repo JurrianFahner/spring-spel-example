@@ -26,17 +26,17 @@ public class Runner implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
         ExpressionParser expressionParser = new SpelExpressionParser();
+        
         Expression expression = expressionParser.parseExpression("'Any string'");
         String strResult = (String) expression.getValue();        
+        log.debug("Spel test: {}", strResult);
         
         expression = expressionParser.parseExpression("'Any string'.length()-5");
-        int intResult = (Integer) expression.getValue();
-        
-        log.debug("Spel test: {}", strResult);
+        int intResult = (Integer) expression.getValue();        
         log.debug("Length: {}", intResult);
+        
 
         Car car = new Car();
-
         StandardEvaluationContext context = new StandardEvaluationContext(car);
         
         List<String> spel =  pe.getSpel();
