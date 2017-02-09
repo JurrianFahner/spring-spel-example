@@ -1,16 +1,13 @@
 package nl.ensignprojects;
 
-import java.util.Arrays;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import nl.ensignprojects.model.Car;
 import nl.ensignprojects.model.PropertiesExample;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.expression.Expression;
 import org.springframework.expression.ExpressionParser;
-import org.springframework.expression.ParserContext;
 import org.springframework.expression.spel.standard.SpelExpressionParser;
 import org.springframework.expression.spel.support.StandardEvaluationContext;
 import org.springframework.stereotype.Component;
@@ -50,8 +47,7 @@ public class Runner implements CommandLineRunner {
         log.debug("{}", car);
         
         log.debug("#rules: {}", spel.size());
-        
-
+                
     }
     
 }
